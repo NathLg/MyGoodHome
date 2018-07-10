@@ -1,14 +1,17 @@
 <template>
     <div class="AdminHome">
         <Header/>
-        Admin Home
-    </div>
+        <b-card id="historicOpening">
+            <HistoricOpening/>
+        </b-card>
+  </div>
 </template>
 <script>
 import Header from './Header'
+import HistoricOpening from './HistoricOpening'
 export default {
     name: 'AdminHome',
-    components: {Header},
+    components: {Header, HistoricOpening},
 
     data (){
         return {
@@ -20,5 +23,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+#historicOpening{
+    width: 40em;
+    margin: 4.5em 2em;
+}
 </style>

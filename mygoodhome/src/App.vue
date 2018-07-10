@@ -31,14 +31,14 @@ Vue.use(BootstrapVue);
 //Rooter Part
 const routes = [
   // { path: '/', component: Header },
-  { path: '/', component: AdminHome },
+  { path: '/admin', component: AdminHome },
   { path: '/', component: Connection },
   { path: '/inscription', component: Inscription },
   { path: '/locations', component: LocationsList },
   { path: '/locations/:id', component: LocationDetail },
   { path: '/historic', component: HistoricOpening },
 ];
-const router = new VueRouter({routes});
+const router = new VueRouter({routes, mode: 'history'});
 
 export default {
   name: 'App',

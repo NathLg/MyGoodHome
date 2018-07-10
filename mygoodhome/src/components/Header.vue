@@ -11,7 +11,7 @@
             {{ brand }}
             </b-navbar-brand>
           <b-navbar-nav>
-            <b-button>
+            <b-button v-on:click="disconnect">
               <img width="20px" height="25px" src="/static/Disconnect-btn.svg"/>
             </b-button>
           </b-navbar-nav>
@@ -27,6 +27,8 @@
     </div>
 </template>
 <script>
+
+
 export default {
     name: 'Header',
     data (){
@@ -36,14 +38,17 @@ export default {
         }
     },
     methods:{
+        disconnect: function(){
+            this.$router.push('/');
+        },
         redirectListLocation: function(){
-            router.push({ path: '/ListLocation'})
+            this.$router.push('/locations');
         },
         redirectAddLocation: function(){
-            router.push({ path: '/AddLocation'})
+           this.$router.push({ path: '/AddLocation'})
         },
         redirectListUser: function(){
-            router.push({ path: '/ListUser'})
+            this.$router.push({ path: '/ListUser'})
         }
     }
 }
