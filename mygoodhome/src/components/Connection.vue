@@ -10,6 +10,9 @@
         <label for="password-connection">Mot de passe</label>
         <input type="password" class="form-control" id="password-connection" placeholder="Password">
       </div>
+      <div class="form-group">
+        <a href="Inscription.vue">Pas encore inscrit ?</a>
+      </div>
       <button type="submit" class="btn btn-info">Connexion</button>
     </form>
   </div>

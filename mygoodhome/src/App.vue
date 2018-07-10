@@ -10,22 +10,28 @@
 
 <script>
 import Vue from 'vue'
-
 import VueRouter from 'vue-router';
-import HomePage from './components/HomePage.vue';
-import Inscription from './components/Inscription';
-import Connection from './components/Connection';
-
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue);
-
 import globalClasses from'./global-style.scss'
+
+import HomePage from './components/HomePage.vue';
+import Inscription from './components/Inscription';
+import Connection from './components/Connection';
+import LocationsList from './components/LocationsList'
+import LocationDetail from './components/LocationDetail'
+import HistoricOpening from './components/HistoricOpening'
+
+Vue.use(BootstrapVue);
 
 //Rooter Part
 const routes = [
-  { path: '/', component: HomePage },
+  { path: '/', component: Connection },
+  { path: '/inscription', component: Inscription },
+  { path: '/locations', component: LocationsList },
+  { path: '/locations/:id', component: LocationDetail },
+  { path: '/historic', component: HistoricOpening },
   //{ path: '/join', component: Join },
 ];
 const router = new VueRouter({routes});
