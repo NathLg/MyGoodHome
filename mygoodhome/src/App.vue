@@ -4,11 +4,17 @@
   </div>
 </template>
 
+<style>
+  @import "assets/style.css";
+</style>
+
 <script>
 import Vue from 'vue'
 
 import VueRouter from 'vue-router';
 import HomePage from './components/HomePage.vue';
+import Inscription from './components/Inscription';
+import Connection from './components/Connection';
 
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -30,7 +36,7 @@ export default {
   components: { HomePage, /*Join*/ },
   data (){
         return {
-            
+
         }
   }
 }
@@ -60,7 +66,7 @@ export default {
       }
       .nav-item + .nav-item {
         margin-left: 2em;
-      }  
+      }
     }
   }
 }
