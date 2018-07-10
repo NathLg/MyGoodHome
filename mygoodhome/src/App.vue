@@ -4,10 +4,6 @@
   </div>
 </template>
 
-<style>
-  @import "assets/style.css";
-</style>
-
 <script>
 import Vue from 'vue'
 import VueRouter from 'vue-router';
@@ -40,7 +36,11 @@ const routes = [
   { path: '/bookings', component: BookingList },
   { path: '/open-door', component: OpenDoor },
 ];
-const router = new VueRouter({routes});
+
+const router = new VueRouter({
+  routes,
+  mode: 'history'
+});
 
 export default {
   name: 'App',

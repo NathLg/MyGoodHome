@@ -13,7 +13,7 @@
         border-radius: 25px;
         padding: 0em;
       }
-      
+
     }
     .btn.btn-menu.btn-secondary{
       transition: none;
@@ -23,7 +23,7 @@
           box-shadow: none;
       }
   }
-  
+
 }
 .menu{
   position: absolute;
@@ -34,7 +34,7 @@
   height: 100%;
   background-color: #f8f9fa ;
   border-right: 0.1em solid #d1d1d1;
-  list-style-type:none !important;   
+  list-style-type:none !important;
   h2{
     font-size: 18px;
     color: blue;
@@ -45,9 +45,28 @@
     list-style:none !important;
     margin: 0.5em 0em;
     padding: 0em;
-  } 
-}
-  //Responsive Rules
-  #app{
-    font-size: 14px;
   }
+}
+//Responsive Rules
+#app{
+  font-size: 14px;
+}
+
+#Header{
+  margin-bottom: 80px;
+}
+.open-door-btn{
+  width: 200px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#open-door{
+  margin-top: 135px;
+}
+#door-to-open{
+  font-size: 20px;
+}
+.h1-page-title{
+  font-size: 20px;
+  margin-bottom: 20px;
+}

@@ -5,7 +5,7 @@
               <b-button class="btn-menu" v-on:click="ShowMenu = !ShowMenu">
                   <img width="20px" height="25px" src="/static/Burger-menu.svg"/>
               </b-button>
-    
+
           </b-navbar-nav>
             <b-navbar-brand tag="h1" class="mb-0" href="#">
             {{ brand }}
