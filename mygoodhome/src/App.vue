@@ -4,9 +4,12 @@
   </div>
 </template>
 
+<style>
+  @import "assets/style.css";
+</style>
+
 <script>
 import Vue from 'vue'
-
 import VueRouter from 'vue-router';
 // import Header from './components/Header.vue';
 import AdminHome from './components/AdminHome.vue';
@@ -14,14 +17,26 @@ import AdminHome from './components/AdminHome.vue';
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue);
-
 import globalClasses from'./global-style.scss'
+
+import Header from './components/Header.vue';
+import Inscription from './components/Inscription';
+import Connection from './components/Connection';
+import LocationsList from './components/LocationsList'
+import LocationDetail from './components/LocationDetail'
+import HistoricOpening from './components/HistoricOpening'
+
+Vue.use(BootstrapVue);
 
 //Rooter Part
 const routes = [
   // { path: '/', component: Header },
   { path: '/', component: AdminHome },
+  { path: '/', component: Connection },
+  { path: '/inscription', component: Inscription },
+  { path: '/locations', component: LocationsList },
+  { path: '/locations/:id', component: LocationDetail },
+  { path: '/historic', component: HistoricOpening },
 ];
 const router = new VueRouter({routes});
 
@@ -31,7 +46,7 @@ export default {
   components: {AdminHome, },
   data (){
         return {
-            
+
         }
   }
 }
@@ -61,7 +76,7 @@ export default {
       }
       .nav-item + .nav-item {
         margin-left: 2em;
-      }  
+      }
     }
   }
 }
