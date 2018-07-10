@@ -11,7 +11,6 @@
 <script>
 import Vue from 'vue'
 import VueRouter from 'vue-router';
-// import Header from './components/Header.vue';
 import AdminHome from './components/AdminHome.vue';
 
 import BootstrapVue from 'bootstrap-vue'
@@ -25,25 +24,28 @@ import Connection from './components/Connection';
 import LocationsList from './components/LocationsList'
 import LocationDetail from './components/LocationDetail'
 import HistoricOpening from './components/HistoricOpening'
+import BookingList from './components/BookingList'
+import OpenDoor from './components/OpenDoor'
 
 Vue.use(BootstrapVue);
 
 //Rooter Part
 const routes = [
-  // { path: '/', component: Header },
-  { path: '/', component: AdminHome },
   { path: '/', component: Connection },
+  { path: '/admin', component: AdminHome },
   { path: '/inscription', component: Inscription },
   { path: '/locations', component: LocationsList },
   { path: '/locations/:id', component: LocationDetail },
   { path: '/historic', component: HistoricOpening },
+  { path: '/bookings', component: BookingList },
+  { path: '/open-door', component: OpenDoor },
 ];
 const router = new VueRouter({routes});
 
 export default {
   name: 'App',
   router,
-  components: {AdminHome, },
+  components: {AdminHome},
   data (){
         return {
 

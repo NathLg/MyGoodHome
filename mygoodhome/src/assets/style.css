@@ -1,3 +1,22 @@
-.homepage{
+#Header{
   margin-bottom: 80px;
+}
+
+.open-door-btn{
+  width: 200px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#open-door{
+  margin-top: 135px;
+}
+
+#door-to-open{
+  font-size: 20px;
+}
+
+.h1-page-title{
+  font-size: 20px;
+  margin-bottom: 20px;
 }
