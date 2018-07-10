@@ -8,7 +8,8 @@
 import Vue from 'vue'
 
 import VueRouter from 'vue-router';
-import HomePage from './components/HomePage.vue';
+// import Header from './components/Header.vue';
+import AdminHome from './components/AdminHome.vue';
 
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -19,15 +20,15 @@ import globalClasses from'./global-style.scss'
 
 //Rooter Part
 const routes = [
-  { path: '/', component: HomePage },
-  //{ path: '/join', component: Join },
+  // { path: '/', component: Header },
+  { path: '/', component: AdminHome },
 ];
 const router = new VueRouter({routes});
 
 export default {
   name: 'App',
   router,
-  components: { HomePage, /*Join*/ },
+  components: {AdminHome, },
   data (){
         return {
             
