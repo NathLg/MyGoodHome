@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io();
+
+	  function porteToggle() {
+		socket.emit('porte');
+	  }
+
+	  function garageToggle() {
+		socket.emit('garage');
+	  }
+	</script>
+</head>
+<body>
+	<button onclick="porteToggle()">Porte On/Off</button>
+	<button onclick="garageToggle()">Garage On/Off</button>
+</body>
+</html>
