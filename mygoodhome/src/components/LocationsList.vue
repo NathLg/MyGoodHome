@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div id="LocationsList">
     <Header/>
     <div class="list-group">
       <h1 style="font-size: 20px">Mes logements</h1>
-      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <a v-on:click="detailLocation" class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">Logement 1</h5>
         </div>
@@ -39,6 +39,12 @@
 <script>
   import Header from "./Header";
   export default {
-    components: {Header}
+    name: 'LocationsList',
+    components: {Header},
+    methods:{
+      detailLocation: function (){
+        this.$router.push('/admin/locations/:id')
+      }
+    }
   }
 </script>

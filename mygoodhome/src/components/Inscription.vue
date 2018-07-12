@@ -4,7 +4,7 @@
       <b-form-group label="Prénom:"
                     label-for="Votre prénom">
         <b-form-input 
-                      type="firstName"
+                      type="text"
                       v-model="form.firstName"
                       required
                       placeholder="Votre Prénom">
@@ -14,7 +14,7 @@
                     label-for="Votre nom"
                     description="We'll never share your email with anyone else.">
         <b-form-input 
-                      type="lastName"
+                      type="text"
                       v-model="form.lastName"
                       required
                       placeholder="Votre nom">
@@ -24,7 +24,7 @@
       <b-form-group label="Email :"
                     label-for="Votre adresse email"
                     description="Nous ne partagerons jamais votre addresse e-mail.">
-        <b-form-input type="email"
+        <b-form-input type="text"
                       v-model="form.email"
                       required
                       placeholder="Votre email">
@@ -72,8 +72,10 @@ export default {
   },
   methods: {
     onSubmit (evt) {
-      evt.preventDefault();
-      alert(JSON.stringify(this.form));
+      // evt.preventDefault();
+      // alert(JSON.stringify(this.form));
+     console.log(this.form)
+      // this.$store.state.user.commit(this.form)
     },
     onReset (evt) {
       evt.preventDefault();

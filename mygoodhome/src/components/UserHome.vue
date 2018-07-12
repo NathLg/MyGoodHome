@@ -1,20 +1,22 @@
 <template>
-    <div class="AdminHome">
-    <Header/>
-    <b-card id="historicOpening">
-        <HistoricOpening/>
-    </b-card>
+    <div class="UserHome">
+        <Header/>
+        <b-card id="historicOpening">
+            <HistoricOpening/>
+        </b-card>
   </div>
 </template>
 <script>
 import Header from './Header'
 import HistoricOpening from './HistoricOpening'
+
 export default {
-    name: 'AdminHome',
+    name: 'UserHome',
     components: {Header, HistoricOpening},
 
     data (){
         return {
+            brand: 'My Good Home',
             ShowMenu: false
         }
     }

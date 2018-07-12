@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header/>
     <h1 class="display-3" style="font-size: 20px">Historique des ouvertures</h1>
     <div class="list-group">
       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -39,6 +38,6 @@
 <script>
   import Header from "./Header";
   export default {
-    components: {Header}
+    name: 'HistoricOpening',
   }
 </script>
