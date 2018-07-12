@@ -31,6 +31,7 @@ import HistoricOpening from './components/HistoricOpening'
 import BookingList from './components/BookingList'
 import OpenDoor from './components/OpenDoor'
 import UserInformations from './components/UserInformations.vue';
+import UserRights from './components/UserRights.vue';
 
 Vue.use(BootstrapVue);
 Vue.use(Vuex)
@@ -49,6 +50,7 @@ const routes = [
   { path: '/user/locations', component: UserLocationsList},
   { path: '/user/locations/:id', component: UserLocationDetails},
   { path: '/user/informations', component: UserInformations},
+  { path: '/user/rights', component: UserRights},
   { path: '/user/open-door', component: OpenDoor },
   { path: '/user/bookings', component: BookingList },
 ];

@@ -27,7 +27,7 @@
                 <ul v-on:click="redirectListMyLocation">Listes de mes locations</ul>
             <h2>Mes informations</h2>
                 <ul v-on:click="redirectUserInformations">Informations personnelles</ul>
-                <ul v-on:click="redirectListUser">Mes droits et accès</ul>
+                <ul v-on:click="redirectUserRight">Mes droits et accès</ul>
         </li>
     </div>
 </template>
@@ -78,11 +78,17 @@ export default {
         },
         redirectUserInformations: function(){
             this.$router.push({ path: '/user/informations'})
+        },
+        redirectUserRight: function(){
+            this.$router.push({ path: '/user/rights'})
         }
+        
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
+    .mb-0{
+        cursor: pointer;
+    }
 </style>
